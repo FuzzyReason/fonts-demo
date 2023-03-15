@@ -2,9 +2,13 @@ import Head from 'next/head'
 
 import styles from '@/styles/Home.module.css'
 import Header from '@/components/header'
-import localFont from '@next/font/local';
 
-const myFont = localFont({ src: './my-font.ttf' })
+import { Inter } from 'next/font/google'
+
+const inter = Inter({ 
+  subsets: ['latin'], 
+  weight: '400' 
+})
 
 export default function Home() {
   return (
@@ -15,8 +19,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main style={myFont.style} className={styles.main}>
-         <Header>Hello World!</Header>
+      <main className={styles.main}>
+         <Header>Hello World</Header>
          <p className={styles.paragraph}>I am a fonts demo</p>
       </main>
     </>

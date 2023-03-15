@@ -1,12 +1,12 @@
 import React from "react"
-import { Inter } from 'next/font/google'
+import localFont from '@next/font/local';
+
+const myFont = localFont({ src: '../fonts/my-font.ttf' })
 
 import styles from '@/styles/Header.module.css'
 
-const inter = Inter({ subsets: ['latin'] })
-
 export default function Header({children}) {
   return (
-    <h1 style={inter.style} className={styles.header}>{children}</h1>
+    <h1 style={myFont.style} className={styles.header}>{children}</h1>
   ) 
 }
