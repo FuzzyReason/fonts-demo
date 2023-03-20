@@ -1,14 +1,14 @@
 import '@/styles/globals.css'
 import { Inter } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'], weight: '400' })
+const inter = Inter({ subsets: ['latin'], weight: '400', variable: '--font-inter' })
 
 export default function App({ Component, pageProps }) {
   return (
     <>
       <style jsx global>{`
         :root {
-          --inter-font: ${inter.style.fontFamily};
+          --font-inter: ${inter.style.fontFamily};
         }
       `}</style>
       <Component {...pageProps} />
